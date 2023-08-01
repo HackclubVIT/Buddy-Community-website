@@ -25,6 +25,23 @@ document.getElementById("contactForm").addEventListener('submit', (e) => {
         alert("Please fill in all the fields.");
         return; // Prevent form submission
     }
+
+    if (!validateRegistrationNumber(regno)) {
+        document.getElementById("regnoError").style.visibility = "visible";
+        return; // Prevent form submission
+    }else {
+        document.getElementById("regnoError").style.visibility = "hidden";
+    }
+
+    if (!validatePhoneNumber(phone)) {
+        // Display error message on the page
+        document.getElementById("phoneError").style.visibility = "visible";
+        return; // Prevent form submission
+    } else {
+        // Clear the error message if phone number is valid
+        document.getElementById("phoneError").style.visibility = "hidden";
+    }
+
     saveMessages(emailid, name, phone, regno);
 });
 
@@ -44,4 +61,16 @@ const saveMessages = (emailid, name, phone, regno) => {
         window.location.replace("/success.html");
     });
 };
+
+function validateRegistrationNumber(regno) {
+    // Regular expression to match the desired format
+    const regex = /^\d{2}[A-Za-z]{1,5}\d{4,5}$/;
+    return regex.test(regno);
+}
+
+function validatePhoneNumber(phone) {
+    // Regular expression to match exactly 10 digits
+    const regex = /^\d{10}$/;
+    return regex.test(phone);
+}
 

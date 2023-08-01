@@ -22,27 +22,29 @@
         <form action="" id="contactForm">
           <h2>HackClub Invites</h2>
 
-          <div class="inputbox">
-            <label>Name:</label> <br /><br /><br>
+          <div class="inputbox name">
+            <label>Name :</label> <br /><br /><br>
             <input type="text" placeholder="Enter your name" id="name" />
           </div>
 
           <div class="inputbox">
-            <label>Phone Number:</label> <br /><br /><br>
+            <label>Phone Number :</label> <br /><br /><br>
             <input type="number" id="phone" placeholder="Enter phone number" />
-          </div>
+        </div>
+        <div id="phoneError">Please enter a valid 10-digit phone number.</div> <!-- Error message placeholder -->
 
           <div class="inputbox">
-            <label>Registration Number:</label> <br /><br /><br>
+            <label>Registration Number :</label> <br /><br /><br>
             <input
               type="text"
               placeholder="Enter your registration number"
               id="regno"
             />
           </div>
+          <div id="regnoError">Please enter a valid registration number.</div> <!-- Error message placeholder -->
 
-          <div class="inputbox">
-            <label>Email:</label> <br /><br /><br>
+          <div class="inputbox email">
+            <label>Email :</label> <br /><br /><br>
             <input
               type="email"
               id="emailid"
