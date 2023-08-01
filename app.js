@@ -42,6 +42,13 @@ document.getElementById("contactForm").addEventListener('submit', (e) => {
         document.getElementById("phoneError").style.visibility = "hidden";
     }
 
+    if (!validateEmailAddress(emailid)) {
+        document.getElementById("emailError").style.visibility = "visible";
+        return; // Prevent form submission
+    } else {
+        document.getElementById("emailError").style.visibility = "hidden";
+    }
+
     saveMessages(emailid, name, phone, regno);
 });
 
@@ -74,3 +81,8 @@ function validatePhoneNumber(phone) {
     return regex.test(phone);
 }
 
+function validateEmailAddress(email) {
+    // Regular expression to match the required format
+    const regex = /^[a-zA-Z0-9._%+-]+@vitstudent\.ac\.in$/;
+    return regex.test(email);
+}
