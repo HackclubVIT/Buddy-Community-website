@@ -34,7 +34,7 @@ h2{
 }
 .inputbox{
     position: relative;
-    margin: 30px 0;
+    margin: 25px 0;
     width: auto;
     border-bottom: 2px solid #fff;
 }
@@ -72,6 +72,7 @@ button{
     font-size: 1em;
     font-weight: 800;
     background: linear-gradient(to right, #28649d, #4887c2, #28649d);
+    margin-bottom: 2rem;
 }
 
 @media (max-width: 370px) {
