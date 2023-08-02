@@ -20,8 +20,9 @@ document.getElementById("contactForm").addEventListener('submit', (e) => {
     const name = document.getElementById("name").value;     
     const phone = document.getElementById("phone").value;
     const regno = document.getElementById("regno").value;
+    const lang = document.getElementById("Lang").value;
 
-    if (!emailid || !name || !phone || !regno) {
+    if (!emailid || !name || !phone || !regno || !lang) {
         alert("Please fill in all the fields.");
         return; // Prevent form submission
     }
@@ -49,23 +50,24 @@ document.getElementById("contactForm").addEventListener('submit', (e) => {
         document.getElementById("emailError").style.visibility = "hidden";
     }
 
-    saveMessages(emailid, name, phone, regno);
+    saveMessages(emailid, name, phone, regno, lang);
 });
 
 
-const saveMessages = (emailid, name, phone, regno) => {
+const saveMessages = (emailid, name, phone, regno, lang) => {
     var newContactForm = contactFormDB.push();
     newContactForm.set({
         name: name,
         emailid: emailid,
         phone: phone,
         regno: regno,
+        lang: lang
     })
     .then(() => {
         window.location.replace("/success.html");
     })
     .catch((error) => {
-        window.location.replace("/success.html");
+        window.location.replace("/failure.html");
     });
 };
 

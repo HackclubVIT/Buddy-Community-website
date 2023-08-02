@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -37,13 +38,6 @@ h2{
     border-bottom: 2px solid #fff;
 }
 
-.name {
-  margin-bottom: 25px;
-}
-
-#emailError {
-  margin-bottom: 45px;
-}
 
 
 .inputbox label{
@@ -59,9 +53,10 @@ h2{
 
 .inputbox input {
     width: 100%;
-    height: 48px;
+    height: 40px;
     background: transparent;
     border: none;
+    border-radius: 20px 20px 0 0;
     outline: none;
     font-size: 1em;
     padding: 0 35px 0 5px;
@@ -92,7 +87,7 @@ button{
     font-size: 1em;
     font-weight: 800;
     background: linear-gradient(to right, #28649d, #4887c2, #28649d);
-    margin-bottom: 2rem;
+    margin: 2rem auto;
 }
 
 #phoneError,  #regnoError, #emailError {
@@ -121,6 +116,23 @@ button{
   }
  }
 }
+
+.drop-down {
+  appearance: none;
+  -webkit-appearance: none;
+  margin-top:5px;
+  padding-left:5px;
+  -moz-appearance: none;
+  margin-bottom: 7px;
+  background-color: #28649d;
+  color:#ffffff;
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+} 
+
+
 
 @media (max-width: 768px) {
   .form-box{
