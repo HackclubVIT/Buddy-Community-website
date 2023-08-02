@@ -55,11 +55,11 @@ h2 {
 }
 
 .name {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 #emailError {
-  margin-bottom: 45px;
+  margin-bottom: 15px;
 }
 
 .inputbox label {
@@ -190,20 +190,19 @@ button {
 
   body {
     background-image: rgb(127, 127, 230);
-  }
 
-  .form-box {
-    width: 80%;
-    height: 90%;
-    /*background: rgb(86, 86, 220);
+    .form-box {
+      width: 80%;
+      height: 90%;
+      /*background: rgb(86, 86, 220);
     border: 2px solid rgba(255,255,255,0.5);
     border-radius: 20px;*/
-    backdrop-filter: blur(70px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      backdrop-filter: blur(70px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
-
 
 }
 
