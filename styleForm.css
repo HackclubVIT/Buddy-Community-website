@@ -9,43 +9,57 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     min-height: 100vh;
     width: 100%;
-    background: url('img4.jpg');
+    background: url('images/wp11582889-blue-pixel-wallpapers.png');
     background-position: center;
     background-size: cover;
 }
-.form-box{
-    position: relative;
-    width: 400px;
-    background: transparent;
-    border: 2px solid rgba(255,255,255,0.5);
-    border-radius: 20px;
-    backdrop-filter: blur(70px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.logo{
+  display: block;
+  z-index: 1;
+  width: 70px;
+  height: 70px;
+  margin: 1rem;
 }
-h2{
-    padding-top: 16px;
+
+.form-box{
+  position: relative;
+  width: 400px;
+  border-radius: 20px;
+  backdrop-filter: blur(70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+background: rgba( 0, 0, 0, 0.25 );
+box-shadow: 0 8px 32px 0 rgba(58, 65, 173, 0.37);
+backdrop-filter: blur( 5px );
+-webkit-backdrop-filter: blur( 4px );
+border: 1px solid rgba(255, 255, 255, 0.322);
+}
+
+h2{ 
     font-size: 2em;
-    color: #F6F4EB;
+    color: #f85736;
     text-align: center;
 }
+
 .inputbox{
     position: relative;
     width: auto;
     border-bottom: 2px solid #fff;
 }
 
-
-
 .inputbox label{
     position: absolute;
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
-    color: #fff;
+    color: #2f66ff;
     font-size: 1em;
     pointer-events: none;
     transition: 0.5s;
@@ -56,11 +70,40 @@ h2{
     height: 40px;
     background: transparent;
     border: none;
-    border-radius: 20px 20px 0 0;
     outline: none;
     font-size: 1em;
     padding: 0 35px 0 5px;
+    color: rgb(64, 178, 248);
+    
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    background: white;
     color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 800;
+    background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+    );
+    margin-top: 2rem;
+}
+
+::placeholder { 
+  color: rgb(64, 178, 248);;
+  opacity: 1; 
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -75,41 +118,48 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-button{
-    width: 100%;
-    height: 40px;
-    border-radius: 40px;
-    background: white;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 1em;
-    font-weight: 800;
-    background: linear-gradient(to right, #28649d, #4887c2, #28649d);
-    margin: 2rem auto;
-}
-
 #phoneError,  #regnoError, #emailError {
     color: red;
     font-size: 0.8em;
     visibility: hidden; 
 }
 
-@media (max-width: 370px) {
+@media (max-width: 343px) {
+  .logo{
+    height: 150px;
+    width: 150px;
+  }
+
   .form-box{
-    width: 100%;
-    height: 100%;
+    padding-top: 170px;
+    width: 90%;
+    height: 90%;
   }
   body{
     background-image: rgb(127, 127, 230);
   .form-box{
-    width: 100%;
-    height: 100%;
-    /*background: rgb(86, 86, 220);
-    border: 2px solid rgba(255,255,255,0.5);
-    border-radius: 20px;*/
-    backdrop-filter: blur(70px);
+    width: 90%;
+    height: 90%;
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ }
+}
+
+@media (max-width: 370px) {
+
+  .form-box{
+    width: 90%;
+    height: 90%;
+  }
+  body{
+    background-image: rgb(127, 127, 230);
+  .form-box{
+    width: 90%;
+    height: 90%;
+    backdrop-filter: blur(8px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,8 +178,9 @@ button{
   color:#ffffff;
   border: none;
   width: 100%;
-  height: 100%;
+  height:3rem;
   border-radius: 10px;
+  margin-top: 1rem;
 } 
 
 
@@ -138,25 +189,18 @@ button{
   .form-box{
     width: 100%;
     height: 100%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding: 2rem;
   }
   body{
     background-image: rgb(127, 127, 230);
   .form-box{
     width: 80%;
-    height: 100%;
-    /*background: rgb(86, 86, 220);
-    border: 2px solid rgba(255,255,255,0.5);
-    border-radius: 20px;*/
+    height: 90%;
     backdrop-filter: blur(70px);
     display: flex;
     justify-content: center;
     align-items: center;
   }
  }
- 
 }
 
 @media (max-width: 1024px) {
@@ -178,4 +222,19 @@ button{
     width: 50%;
     height: 60%;
   }
+}
+
+
+/* scroll bar */
+body::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #131212; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #f85736; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
 }
