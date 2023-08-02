@@ -38,11 +38,11 @@ h2{
 }
 
 .name {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 #emailError {
-  margin-bottom: 45px;
+  margin-bottom: 15px;
 }
 
 
@@ -92,7 +92,7 @@ button{
     font-size: 1em;
     font-weight: 800;
     background: linear-gradient(to right, #28649d, #4887c2, #28649d);
-    margin-bottom: 2rem;
+    margin: 2rem auto;
 }
 
 #phoneError,  #regnoError, #emailError {
@@ -108,6 +108,7 @@ button{
   }
   body{
     background-image: rgb(127, 127, 230);
+  }
   .form-box{
     width: 100%;
     height: 100%;
@@ -120,6 +121,20 @@ button{
     align-items: center;
   }
  }
+
+
+select{
+  appearance: none;
+  -webkit-appearance: none;
+  margin-top:5px;
+  padding-left:5px;
+  -moz-appearance: none;
+  margin-bottom: 7px;
+  background-color: transparent;
+  color:#fff;
+  border: none;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 768px) {
@@ -132,6 +147,7 @@ button{
   }
   body{
     background-image: rgb(127, 127, 230);
+  }
   .form-box{
     width: 80%;
     height: 100%;
@@ -145,7 +161,6 @@ button{
   }
  }
  
-}
 
 @media (max-width: 1024px) {
   .form-box{
