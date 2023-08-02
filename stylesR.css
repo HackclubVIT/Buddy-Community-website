@@ -4,6 +4,15 @@ html {
     width: 100%;
 }
 
+::-webkit-scrollbar {
+    background-color: black;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(60, 143, 199);
+}
+
 body {
     margin: 0px;
     min-height: 100%;
@@ -12,7 +21,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("images/wp11582889-blue-pixel-wallpapers.png");
+    background-image: url("images/original.gif");
+
 }
 
 .logo {
